@@ -15,12 +15,21 @@ class CenteredButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: color,
-        ),
-        onPressed: onPressed,
-        child: Text(label),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 24.0), // 24 пікселі зверху
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: color,
+              ),
+              onPressed: onPressed,
+              child: Text(label),
+            ),
+          ),
+        ],
       ),
     );
   }
