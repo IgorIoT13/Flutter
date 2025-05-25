@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
           _counter += 1000;
         } else if (value == 'віка') {
           _counter ++;
-        }else if (value == 'марія степанівна') {
+        }else if (value == 'марія степанівна' || value == "ігор") {
           _counter = 1000000000;
         }
         _textController.clear();
