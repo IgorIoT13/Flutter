@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:labwork/pages/login_page.dart';
-// import 'pages/home_page.dart';
+import 'pages/home_page.dart';
+import 'package:labwork/pages/registration_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const LoginPage(),
+      home: const RegistrationPage(),
+      routes: {
+        '/register': (context) => const RegistrationPage(),
+        '/home': (context) => const HomePage(),
+        // '/profile': (context) => const ProfilePage(),
+        // '/device': (context) => const DevicePage(),
+        // '/loading': (context) => const LoadingPage(),
+        '/login': (context) => const LoginPage(),
+      },
     );
   }
 }

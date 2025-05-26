@@ -18,18 +18,33 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Login Page'),
+        title: const Text('Login'),
       ),
       body: Center(
         child: Column(
           children: [
             InputBox(title: "Логін"),
             InputBox(title: "Пароль", isPassword: true),
-            CenteredButton(
-              label: "Увійти", 
-              onPressed: (){
-              // Navigator.pushNamed(context, '/home');
-            }),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CenteredButton(
+                    label: "Увійти",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
+                  ),
+                  const SizedBox(width: 16), // Відступ між кнопками
+                  CenteredButton(
+                    label: "Зареєструватися",
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/register');
+                    },
+                  ),
+                ],
+              ),
+            )
         ],)
       ),
     );

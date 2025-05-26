@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/device_section.dart';
+
 class HomePage extends StatelessWidget{
   const HomePage({super.key});
 
@@ -9,7 +11,9 @@ class HomePage extends StatelessWidget{
       appBar: AppBar(
         title: const Text('Login Page'),
       ),
-      body: Center(),
+      body: Center(
+        child: DeviceSection(deviceName: "Name", shortDescription: "Short Description"),
+      ),
     );
   }
 }
